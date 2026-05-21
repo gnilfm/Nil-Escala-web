@@ -1,14 +1,16 @@
 [
     {
-        "relation": [
-            "delegate_permission/common.handle_all_urls"
-        ],
-        "target": {
-            "namespace": "android_app",
-            "package_name": "com.nilescala.app",
-            "sha256_cert_fingerprints": [
-                "73:78:72:65:19:65:BC:97:05:FF:BF:87:DC:34:12:C1:7D:B1:AA:AF:B7:3E:22:D6:4D:F8:D2:F8:3F:56:C3:6F"
-            ]
-        }
+      "relation": [
+        "delegate_permission/common.handle_all_urls",
+        "delegate_permission/common.get_login_creds"
+      ],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.nilescala.app",
+        "sha256_cert_fingerprints": [
+          "73:78:72:65:19:65:BC:97:05:FF:BF:87:DC:34:12:C1:7D:B1:AA:AF:B7:3E:22:D6:4D:F8:D2:F8:3F:56:C3:6F",
+          "4D:91:F8:C5:29:BF:53:62:9E:43:B7:91:E5:34:08:0F:4A:15:D6:39:F7:32:9A:4F:61:F8:14:24:30:41:25:59"
+        ]
+      }
     }
-]
+  ]
