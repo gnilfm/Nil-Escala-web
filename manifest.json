@@ -1,0 +1,65 @@
+{
+  "id": "com.nilescala.app",
+  "name": "Nil Escala",
+  "short_name": "Nil Escala",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "minimal-ui"
+  ],
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait",
+  "description": "Gerenciador de escala de trabalho 6x4 inteligente com suporte offline.",
+  "categories": [
+    "productivity",
+    "utilities",
+    "business"
+  ],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Abrir Escala",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/icon.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MjAiIGhlaWdodD0iMTI4MCIgdmlld0JveD0iMCAwIDcyMCAxMjgwIj48cmVjdCB3aWR0aD0iNzIwIiBoZWlnaHQ9IjEyODAiIGZpbGw9IiNmZmZmZmYiLz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iNzIwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzI1NjNlYiIvPjx0ZXh0IHg9IjM2MCIgeT0iNzAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjQwIiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Fc2NhbGEgNng0PC90ZXh0PjxyZWN0IHg9IjQwIiB5PSIxNTAiIHdpZHRoPSI2NDAiIGhlaWdodD0iNjQwIiByeD0iMjAiIGZpbGw9IiNmMXZmNzkiLz48L3N2Zz4=",
+      "sizes": "720x1280",
+      "type": "image/svg+xml",
+      "form_factor": "narrow",
+      "label": "Visualização da Escala no Celular"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgwIiBoZWlnaHQ9IjcyMCIgdmlld0JveD0iMCAwIDEyODAgNzIwIj48cmVjdCB3aWR0aD0iMTI4MCIgaGVpZ2h0PSI3MjAiIGZpbGw9IiNmZmZmZmYiLz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTI4MCIgaGVpZ2h0PSI4MCIgZmlsbD0iIzI1NjNlYiIvPjx0ZXh0IHg9IjY0MCIgeT0iNTUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjMyIiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5HZXJlbmNpYWRvciBkZSBFc2NhbGEgNng0PC90ZXh0PjxyZWN0IHg9IjEwMCIgeT0iMTUwIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgcng9IjIwIiBmaWxsPSIjZjFmNWY5Ii8+PHJlY3QgeD0iNjgwIiB5PSIxNTAiIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiByeD0iMjAiIGZpbGw9IiNlMmU4ZjAiLz48L3N2Zz4=",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "Visualização em Desktop"
+    }
+  ]
+}

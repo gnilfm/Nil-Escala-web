@@ -1,0 +1,64 @@
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependências
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+.env.test
+.env.production
+
+# Arquivos temporários de documentação ou scripts
+ANDROID_GUIDE.md
+*.ps1
+
+# PWA / Android Builds
+# Ignora arquivos de build e binários
+*.aab
+*.apk
+*.apks
+.bubblewrap
+
+# Ignora chaves de segurança (NUNCA comite keystores)
+*.keystore
+*.jks
+android/keystore/
+android/keystore.properties
+
+# Ignora a pasta do projeto Android gerada automaticamente pelo Bubblewrap
+android/app/
+android/build/
+android/.gradle/
+android/gradle/
+android/gradlew
+android/gradlew.bat
+android/settings.gradle
+
+# Nota: Mantemos 'android/twa-manifest.json' e 'android/assetlinks.json' visíveis para o git
+!android/twa-manifest.json
+!android/assetlinks.json
+
+# Ignora arquivos pdf
+*.pdf

@@ -1,0 +1,31 @@
+{
+  "name": "escala-6x4-pwa",
+  "private": true,
+  "version": "1.0.10",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "pwa:check": "echo 'Certifique-se de que images/icon.png existe e o site foi publicado antes de gerar o Android.'",
+    "android:keygen": "node -e \"const fs = require('fs'); fs.mkdirSync('android/keystore', { recursive: true });\" && keytool -genkeypair -v -keystore android/keystore/android.keystore -alias android -keyalg RSA -keysize 2048 -validity 10000",
+    "build:android": "npm run build && cd android && npx @bubblewrap/cli update && npx @bubblewrap/cli build",
+    "build:signed": "npm run build && cd android && ./gradlew bundleRelease",
+    "android:sha": "keytool -list -v -keystore android/keystore/android.keystore -alias android",
+    "clean:android": "cd android && ./gradlew clean && cd .."
+  },
+  "dependencies": {
+    "@google/genai": "^1.30.0",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  }
+}

@@ -1,0 +1,37 @@
+name: Build iOS (Verify)
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    name: Build iOS App
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Web Assets
+        run: npm run build
+
+      - name: Update Capacitor iOS
+        run: npx cap sync ios
+
+      - name: Build iOS App (Simulator)
+        # Compila para o Simulador para testar se não há erros de código nativo.
+        # Isso NÃO requer certificados de assinatura da Apple.
+        run: |
+          cd ios/App
+          xcodebuild -workspace App.xcworkspace -scheme App -destination 'generic/platform=iOS Simulator' build

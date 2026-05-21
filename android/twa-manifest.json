@@ -1,0 +1,53 @@
+{
+  "packageId": "com.nilescala.app",
+  "host": "nil-escala.vercel.app",
+  "name": "Nil Escala",
+  "launcherName": "Nil Escala",
+  "display": "standalone",
+  "themeColor": "#FFFFFF",
+  "themeColorDark": "#1E293B",
+  "navigationColor": "#FFFFFF",
+  "navigationColorDark": "#1E293B",
+  "navigationDividerColor": "#000000",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#FFFFFF",
+  "enableNotifications": false,
+  "startUrl": "/",
+  "iconUrl": "https://nil-escala.vercel.app/icon.png",
+  "maskableIconUrl": "https://nil-escala.vercel.app/icon.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./keystore/android.keystore",
+    "alias": "android"
+  },
+  "appVersionName": "com.nilescala.app",
+  "appVersionCode": 25,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://nil-escala.vercel.app/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {
+    "playBilling": {
+      "enabled": false
+    },
+    "locationDelegation": {
+      "enabled": false
+    },
+    "firstPartyLinkify": {
+      "enabled": true
+    }
+  },
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "minSdkVersion": 21,
+  "orientation": "default",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "displayOverride": [],
+  "appVersion": "com.nilescala.app"
+}

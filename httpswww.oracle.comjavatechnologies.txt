@@ -1,0 +1,56 @@
+https://www.oracle.com/java/technologies/javase/jdk17-0-13-later-archive-downloads.html
+
+
+bubblewrap init --manifest https://nil-escala.vercel.app/manifest.json
+
+
+comando para verificar o SHA256: keytool -list -v -keystore android\keystore\android.keystore
+SHA256: E1:73:A6:68:AB:BE:23:84:6C:43:3B:F8:37:2D:5F:8A:82:47:7A:61:B0:45:2C:9B:BF:48:60:2B:B6:E3:C8:FC
+
+Verifique o assetlinks.json:
+O arquivo assetlinks.json que você tem atualmente possui um código "fingerprint" (E1:73:A6...).
+Importante: Se você rodar o Bubblewrap para criar o app do zero, ele vai gerar uma nova chave de assinatura. Você precisará pegar o novo SHA-256 que o Bubblewrap fornecer e atualizar o arquivo assetlinks.json no seu código, e fazer o deploy novamente. Se não fizer isso, o app mostrará a barra de URL do navegador no topo (não ficará tela cheia).
+
+SHA256: 73:78:72:65:19:65:BC:97:05:FF:BF:87:DC:34:12:C1:7D:B1:AA:AF:B7:3E:22:D6:4D:F8:D2:F8:3F:56:C3:6F
+
+Transaction id
+PDS.7527-0002-3244-89828
+
+keystore.properties
+storePassword=ko3p7e4m8
+keyPassword=ko3p7e4m8
+keyAlias=android
+storeFile=../keystore/android.keystore
+
+npm run build:android
+O que este comando faz:
+npm run build: Gera os arquivos otimizados do seu site no diretório dist.
+bubblewrap update: Atualiza o projeto Android com as novas configurações que fizemos (como o novo versionCode).
+bubblewrap build: Compila o código Android e gera o arquivo .aab assinado usando a sua chave (android.keystore).
+Onde encontrar o arquivo gerado:
+Após a execução, o arquivo estará na pasta: android/app-release-bundle.aab
+
+Seu arquivo APK ou pacote de aplicativo Android precisa ter o nome de pacote com.nilescala.app
+
+
+https://nil-escala.vercel.app/.well-known/assetlinks.json (link para verificar se o SHA256 esta correto)
+
+Possíveis melhorias
+
+A exibição de borda a borda pode não funcionar para todos os usuários. A partir do Android 15, os aplicativos direcionados ao SDK 35 exibirão a exibição de borda a borda por padrão. Os aplicativos direcionados ao SDK 35 devem lidar com as margens internas para garantir que sejam exibidos corretamente no Android 15 e versões posteriores. Investigue esse problema e reserve um tempo para testar a exibição de borda a borda e fazer as atualizações necessárias. Como alternativa, chame `enableEdgeToEdge()` para Kotlin ou `EdgeToEdge.enable()` para Java para compatibilidade com versões anteriores.
+
+O aplicativo usa APIs ou parâmetros obsoletos para exibição de borda a borda. Uma ou mais das APIs que você usa ou parâmetros que você define para exibição de borda a borda e exibição de janela foram descontinuados no Android 15. Seu aplicativo usa as seguintes APIs ou parâmetros obsoletos.
+android.view.Window.setNavigationBarColor
+android.view.Window.setStatusBarColor
+android.view.Window.getStatusBarColor
+
+Estes começam nos seguintes locais
+J.N.d
+J.N.e
+com.google.androidbrowserhelper.trusted.WebViewFallbackActivity.onCreate
+Para corrigir isso, migre para outras APIs ou parâmetros
+
+Um link direto pode estar falhando porque seus domínios da web não estão associados ao seu aplicativo. Isso significa que, no Android 12 e versões posteriores, seu aplicativo não pode aceitar tráfego de alguns URLs da web. Para corrigir problemas e garantir que os usuários acessem seu aplicativo diretamente, acesse a página de links diretos.
+
+refatore o codigo, aplicando padroes de modelagem e principos de arquitetura limpa(uma abordagem para organizar a aplicacao em camadas, separando responsabilidades e mantendo as regras de negocio independentes de detalhes tecnologicos) para transformar o dominio e solucoes coerentes, sustentaveis e bem estruturadas.
+
